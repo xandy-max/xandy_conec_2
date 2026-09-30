@@ -1,0 +1,411 @@
+/* =========================================
+   ⭐ STAR WARS - PESQUISA
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 30px 15px;
+
+    /* Fundo espacial */
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.8) 1px, transparent 2px),
+        radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.7) 1px, transparent 2px),
+        radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.8) 1px, transparent 2px),
+        radial-gradient(circle at 90% 85%, rgba(255, 255, 255, 0.6) 1px, transparent 2px),
+        radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.8) 1px, transparent 2px),
+        linear-gradient(135deg, #000000, #050816 50%, #101522);
+
+    background-size:
+        180px 180px,
+        250px 250px,
+        320px 320px,
+        220px 220px,
+        280px 280px,
+        cover;
+
+    background-attachment: fixed;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+}
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 34px;
+    color: #ffe81f;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 5px #ffe81f,
+        0 0 15px rgba(255, 232, 31, 0.7),
+        0 0 30px rgba(255, 232, 31, 0.4);
+
+    margin-bottom: 12px;
+}
+
+header p {
+    color: #bfc7d5;
+    font-size: 16px;
+}
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+section {
+    position: relative;
+
+    background: rgba(5, 10, 20, 0.88);
+
+    border: 1px solid #39465a;
+    border-left: 4px solid #ffe81f;
+
+    border-radius: 8px;
+
+    padding: 25px;
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.8),
+        inset 0 0 20px rgba(0, 100, 255, 0.04);
+
+    transition: 0.3s ease;
+}
+
+/* Efeito azul ao passar o mouse */
+
+section:hover {
+    border-color: #4da6ff;
+    border-left-color: #ffe81f;
+
+    box-shadow:
+        0 0 15px rgba(0, 140, 255, 0.25),
+        inset 0 0 20px rgba(0, 140, 255, 0.08);
+
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+section h2 {
+    color: #ffe81f;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px rgba(255, 232, 31, 0.5);
+
+    border-bottom: 1px solid #39465a;
+
+    padding-bottom: 12px;
+}
+
+/* =========================================
+   LABELS
+========================================= */
+
+label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+    margin-bottom: 8px;
+
+    color: #e5e7eb;
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    background: #080d16;
+
+    color: #ffffff;
+
+    border: 1px solid #3b4a60;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #737b89;
+}
+
+/* =========================================
+   EFEITO HOLOGRÁFICO NOS CAMPOS
+========================================= */
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+
+    border-color: #4da6ff;
+
+    box-shadow:
+        0 0 5px #4da6ff,
+        0 0 15px rgba(77, 166, 255, 0.35);
+
+    background: #0a111e;
+}
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+/* =========================================
+   SELECT
+========================================= */
+
+select {
+    cursor: pointer;
+}
+
+select option {
+    background: #080d16;
+    color: white;
+}
+
+/* =========================================
+   RADIO BUTTONS
+========================================= */
+
+.opcoes {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 10px;
+}
+
+.opcoes label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #080d16;
+
+    border: 1px solid #303d50;
+
+    padding: 10px 16px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.opcoes label:hover {
+
+    border-color: #ffe81f;
+
+    color: #ffe81f;
+
+    box-shadow:
+        0 0 8px rgba(255, 232, 31, 0.25);
+}
+
+.opcoes input[type="radio"] {
+
+    width: 17px;
+    height: 17px;
+
+    accent-color: #ffe81f;
+
+    cursor: pointer;
+}
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+button {
+
+    width: 100%;
+
+    padding: 17px;
+
+    margin-top: 5px;
+
+    border: 1px solid #ffe81f;
+
+    border-radius: 5px;
+
+    background: #ffe81f;
+
+    color: #000000;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px rgba(255, 232, 31, 0.4);
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+
+    background: #fff45c;
+
+    box-shadow:
+        0 0 10px #ffe81f,
+        0 0 25px rgba(255, 232, 31, 0.6);
+
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: #ffe81f;
+
+    font-size: 14px;
+
+    text-shadow:
+        0 0 8px rgba(255, 232, 31, 0.5);
+}
+
+/* =========================================
+   LINHA DECORATIVA
+========================================= */
+
+footer::before {
+
+    content: "";
+
+    display: block;
+
+    width: 120px;
+
+    height: 2px;
+
+    background: #ffe81f;
+
+    margin: 0 auto 15px;
+
+    box-shadow:
+        0 0 8px #ffe81f;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    section h2 {
+        font-size: 18px;
+    }
+
+    .opcoes {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .opcoes label {
+        width: 100%;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
